@@ -1,5 +1,5 @@
 pipeline {
-    agent any   // Run on any available node (your EC2)
+    agent any   // Run on any available node (EC2)
 
     environment {
         NODE_VERSION = "16"  // Node.js version if using NodeJS plugin
@@ -9,7 +9,7 @@ pipeline {
 
         stage("Clone Code") {
             steps {
-                git branch: "master", url: "https://github.com/Sarfraz-g19/node-todo-cicd.git"
+                git branch: "main", url: "https://github.com/Sarfraz-g19/node-todo-cicd.git"
                 echo 'Code cloned successfully'
             }
         }
