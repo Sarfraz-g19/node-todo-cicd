@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>My Todo List</title>
+  <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+  <h1>My Todo List</h1>
+  <form action="/todo/add" method="POST">
+    <input type="text" name="newtodo" placeholder="Add new task" required>
+    <button type="submit">Add</button>
+  </form>
+  <ul>
+    <% todolist.forEach((todo, idx) => { %>
+      <li>
+        <%= todo %> 
+        <a href="/todo/<%= idx %>">Edit</a>
+        <a href="/todo/delete/<%= idx %>">Delete</a>
+      </li>
+    <% }) %>
+  </ul>
+</body>
+</html>
