@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Edit Todo</title>
+  <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+  <h1>Edit Todo</h1>
+  <form action="/todo/edit/<%= id %>?_method=PUT" method="POST">
+    <input type="text" name="editTodo" value="<%= todo %>" required>
+    <button type="submit">Update</button>
+  </form>
+  <a href="/todo">Back</a>
+</body>
+</html>
